@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name = "viewport" content ="width=device-width, initial-scale=1.0"/>
+        <title>152 Project Assignment 2</title>
+    </head>
+
+    <body>
+        <div class="container">
+          <h1>152 Project Assignment 2</h1>
+            <h1>Simple POST Form</h1>
+        </div>
+        <form class="form">
+            <label>Id Number:</label>
+            <input id="num1" type="number"/>
+            <input type="submit" value="Enter"/>
+        </form>
+        <div class="result">Click Submit!</div>
+
+        <p id ="demo"></p>
+
+        <ul></ul>
+
+        <script>
+          const person = {
+              "id": 1,
+              "firstName": "Terry",
+              "lastName": "Medhurst",
+              "maidenName": "Smitham",
+              "age": 50,
+              "gender": "male",
+              "email": "atuny0@sohu.com",
+              "phone": "+63 791 675 8914",
+              "username": "atuny0",
+              "password": "9uQFF1Lh",
+              "birthDate": "2000-12-25",
+              "image": "https://robohash.org/hicveldicta.png",
+              "bloodGroup": "A−",
+              "height": 189,
+              "weight": 75.4,
+              "eyeColor": "Green",
+              "hair": {
+                "color": "Black",
+                "type": "Strands"
+              },
+              "domain": "slashdot.org",
+              "ip": "117.29.86.254",
+              "address": {
+                "address": "1745 T Street Southeast",
+                "city": "Washington",
+                "coordinates": {
+                  "lat": 38.867033,
+                  "lng": -76.979235
+                },
+                "postalCode": "20020",
+                "state": "DC"
+              }
+            };
+            const person2 = {
+                "id": 2,
+                "firstName": "Sheldon",
+                "lastName": "Quigley",
+                "maidenName": "Cole",
+                "age": 28,
+                "gender": "male",
+                "email": "hbingley1@plala.or.jp",
+                "phone": "+7 813 117 7139",
+                "username": "hbingley1",
+                "password": "CQutx25i8r",
+                "birthDate": "2003-08-02",
+                "image": "https://robohash.org/doloremquesintcorrupti.png",
+                "bloodGroup": "O+",
+                "height": 187,
+                "weight": 74,
+                "eyeColor": "Brown",
+                "hair": {
+                  "color": "Blond",
+                  "type": "Curly"
+                },
+                "domain": "51.la",
+                "ip": "253.240.20.181",
+                "address": {
+                  "address": "6007 Applegate Lane",
+                  "city": "Louisville",
+                  "coordinates": {
+                    "lat": 38.1343013,
+                    "lng": -85.6498512
+                  },
+                  "postalCode": "40219",
+                  "state": "KY"
+                }
+              };
+            const person3 = {
+                "id": 3,
+                "firstName": "Terrill",
+                "lastName": "Hills",
+                "maidenName": "Hoeger",
+                "age": 38,
+                "gender": "male",
+                "email": "rshawe2@51.la",
+                "phone": "+63 739 292 7942",
+                "username": "rshawe2",
+                "password": "OWsTbMUgFc",
+                "birthDate": "1992-12-30",
+                "image": "https://robohash.org/consequunturautconsequatur.png",
+                "bloodGroup": "A−",
+                "height": 200,
+                "weight": 105.3,
+                "eyeColor": "Gray",
+                "hair": {
+                  "color": "Blond",
+                  "type": "Very curly"
+                },
+                "domain": "earthlink.net",
+                "ip": "205.226.160.3",
+                "address": {
+                  "address": "560 Penstock Drive",
+                  "city": "Grass Valley",
+                  "coordinates": {
+                    "lat": 39.213076,
+                    "lng": -121.077583
+                  },
+                  "postalCode": "95945",
+                  "state": "CA"
+                }
+              };
+            const person4 = {
+                "id": 4,
+                "firstName": "Miles",
+                "lastName": "Cummerata",
+                "maidenName": "Maggio",
+                "age": 49,
+                "gender": "male",
+                "email": "yraigatt3@nature.com",
+                "phone": "+86 461 145 4186",
+                "username": "yraigatt3",
+                "password": "sRQxjPfdS",
+                "birthDate": "1969-01-16",
+                "image": "https://robohash.org/facilisdignissimosdolore.png",
+                "bloodGroup": "B+",
+                "height": 157,
+                "weight": 95.9,
+                "eyeColor": "Gray",
+                "hair": {
+                  "color": "Blond",
+                  "type": "Very curly"
+                },
+                "domain": "homestead.com",
+                "ip": "243.20.78.113",
+                "address": {
+                  "address": "150 Carter Street",
+                  "city": "Manchester",
+                  "coordinates": {
+                    "lat": 41.76556000000001,
+                    "lng": -72.473091
+                  },
+                  "postalCode": "06040",
+                  "state": "CT"
+                }
+              };
+            const person5 = {
+                "id": 5,
+                "firstName": "Mavis",
+                "lastName": "Schultz",
+                "maidenName": "Yundt",
+                "age": 38,
+                "gender": "male",
+                "email": "kmeus4@upenn.edu",
+                "phone": "+372 285 771 1911",
+                "username": "kmeus4",
+                "password": "aUTdmmmbH",
+                "birthDate": "1968-11-03",
+                "image": "https://robohash.org/adverovelit.png",
+                "bloodGroup": "O+",
+                "height": 188,
+                "weight": 106.3,
+                "eyeColor": "Brown",
+                "hair": {
+                  "color": "Brown",
+                  "type": "Curly"
+                },
+                "domain": "columbia.edu",
+                "ip": "103.72.86.183",
+                "address": {
+                  "address": "2721 Lindsay Avenue",
+                  "city": "Louisville",
+                  "coordinates": {
+                    "lat": 38.263793,
+                    "lng": -85.700243
+                  },
+                  "postalCode": "40206",
+                  "state": "KY"
+                }
+              };
+            const person6 = {
+              "id": 6,
+              "firstName": "Alison",
+              "lastName": "Reichert",
+              "maidenName": "Franecki",
+              "age": 21,
+              "gender": "female",
+              "email": "jtreleven5@nhs.uk",
+              "phone": "+351 527 735 3642",
+              "username": "jtreleven5",
+              "password": "zY1nE46Zm",
+              "birthDate": "1969-07-21",
+              "image": "https://robohash.org/laboriosamfacilisrem.png",
+              "bloodGroup": "A+",
+              "height": 149,
+              "weight": 105.7,
+              "eyeColor": "Amber",
+              "hair": {
+                "color": "Blond",
+                "type": "Straight"
+              },
+              "domain": "bandcamp.com",
+              "ip": "49.201.206.36",
+              "address": {
+                "address": "18 Densmore Drive",
+                "city": "Essex",
+                "coordinates": {
+                  "lat": 44.492953,
+                  "lng": -73.101883
+                },
+                "postalCode": "05452",
+                "state": "VT"
+              }
+            };
+            const person7 = {
+                "id": 7,
+                "firstName": "Oleta",
+                "lastName": "Abbott",
+                "maidenName": "Wyman",
+                "age": 31,
+                "gender": "female",
+                "email": "dpettegre6@columbia.edu",
+                "phone": "+62 640 802 7111",
+                "username": "dpettegre6",
+                "password": "YVmhktgYVS",
+                "birthDate": "1982-02-21",
+                "image": "https://robohash.org/cupiditatererumquos.png",
+                "bloodGroup": "B−",
+                "height": 172,
+                "weight": 78.1,
+                "eyeColor": "Blue",
+                "hair": {
+                  "color": "Chestnut",
+                  "type": "Wavy"
+                },
+                "domain": "ovh.net",
+                "ip": "25.207.107.146",
+                "address": {
+                  "address": "637 Britannia Drive",
+                  "city": "Vallejo",
+                  "coordinates": {
+                    "lat": 38.10476999999999,
+                    "lng": -122.193849
+                  },
+                  "postalCode": "94591",
+                  "state": "CA"
+                }
+            };
+            const person8 = {
+              "id": 8,
+              "firstName": "Ewell",
+              "lastName": "Mueller",
+              "maidenName": "Durgan",
+              "age": 29,
+              "gender": "male",
+              "email": "ggude7@chron.com",
+              "phone": "+86 946 297 2275",
+              "username": "ggude7",
+              "password": "MWwlaeWcOoF6",
+              "birthDate": "1964-08-24",
+              "image": "https://robohash.org/quiaharumsapiente.png",
+              "bloodGroup": "A−",
+              "height": 146,
+              "weight": 52.1,
+              "eyeColor": "Blue",
+              "hair": {
+                "color": "Chestnut",
+                "type": "Wavy"
+              },
+              "domain": "homestead.com",
+              "ip": "91.200.56.127",
+              "address": {
+                "address": "5601 West Crocus Drive",
+                "city": "Glendale",
+                "coordinates": {
+                  "lat": 33.6152469,
+                  "lng": -112.179737
+                },
+                "postalCode": "85306",
+                "state": "AZ"
+              }
+            };
+            const person9 = {
+              "id": 9,
+              "firstName": "Demetrius",
+              "lastName": "Corkery",
+              "maidenName": "Gleason",
+              "age": 22,
+              "gender": "male",
+              "email": "nloiterton8@aol.com",
+              "phone": "+86 356 590 9727",
+              "username": "nloiterton8",
+              "password": "HTQxxXV9Bq4",
+              "birthDate": "1971-03-11",
+              "image": "https://robohash.org/excepturiiuremolestiae.png",
+              "bloodGroup": "A+",
+              "height": 170,
+              "weight": 97.1,
+              "eyeColor": "Green",
+              "hair": {
+                "color": "Brown",
+                "type": "Strands"
+              },
+              "domain": "goodreads.com",
+              "ip": "78.170.185.120",
+              "address": {
+                "address": "5403 Illinois Avenue",
+                "city": "Nashville",
+                "coordinates": {
+                  "lat": 36.157077,
+                  "lng": -86.853827
+                },
+                "postalCode": "37209",
+                "state": "TN"
+              }
+            };
+            const person10 = {
+              "id": 10,
+        "firstName": "Eleanora",
+        "lastName": "Price",
+        "maidenName": "Cummings",
+        "age": 37,
+        "gender": "female",
+        "email": "umcgourty9@jalbum.net",
+        "phone": "+60 184 408 0824",
+        "username": "umcgourty9",
+        "password": "i0xzpX",
+        "birthDate": "1958-08-11",
+        "image": "https://robohash.org/aliquamcumqueiure.png",
+        "bloodGroup": "O+",
+        "height": 198,
+        "weight": 48,
+        "eyeColor": "Blue",
+        "hair": {
+          "color": "Chestnut",
+          "type": "Wavy"
+        },
+        "domain": "alibaba.com",
+        "ip": "73.15.179.178",
+        "address": {
+          "address": "8821 West Myrtle Avenue",
+          "city": "Glendale",
+          "coordinates": {
+            "lat": 33.5404296,
+            "lng": -112.2488391
+          },
+          "postalCode": "85305",
+          "state": "AZ"
+        }
+            };
+            const person11 = {"id": 11,
+        "firstName": "Marcel",
+        "lastName": "Jones",
+        "maidenName": "Smith",
+        "age": 39,
+        "gender": "male",
+        "email": "acharlota@liveinternet.ru",
+        "phone": "+967 253 210 0344",
+        "username": "acharlota",
+        "password": "M9lbMdydMN",
+        "birthDate": "1961-09-12",
+        "image": "https://robohash.org/impeditautest.png",
+        "bloodGroup": "B−",
+        "height": 203,
+        "weight": 63.7,
+        "eyeColor": "Amber",
+        "hair": {
+          "color": "Black",
+          "type": "Straight"
+        },
+        "domain": "feedburner.com",
+        "ip": "137.235.164.173",
+        "address": {
+          "address": "2203 7th Street Road",
+          "city": "Louisville",
+          "coordinates": {
+            "lat": 38.218107,
+            "lng": -85.779006
+          },
+          "postalCode": "40208",
+          "state": "KY"
+        }};
+            const person12 = {"id": 12,
+        "firstName": "Assunta",
+        "lastName": "Rath",
+        "maidenName": "Heller",
+        "age": 42,
+        "gender": "female",
+        "email": "rhallawellb@dropbox.com",
+        "phone": "+380 962 542 6549",
+        "username": "rhallawellb",
+        "password": "esTkitT1r",
+        "birthDate": "1990-12-14",
+        "image": "https://robohash.org/namquaerataut.png",
+        "bloodGroup": "O−",
+        "height": 168,
+        "weight": 96.8,
+        "eyeColor": "Gray",
+        "hair": {
+          "color": "Black",
+          "type": "Very curly"
+        },
+        "domain": "123-reg.co.uk",
+        "ip": "74.80.53.208",
+        "address": {
+          "address": "6463 Vrain Street",
+          "city": "Arvada",
+          "coordinates": {
+            "lat": 39.814056,
+            "lng": -105.046913
+          },
+          "postalCode": "80003",
+          "state": "CO"
+        }};
+            const person13 = {"id": 13,
+        "firstName": "Trace",
+        "lastName": "Douglas",
+        "maidenName": "Lemke",
+        "age": 26,
+        "gender": "male",
+        "email": "lgribbinc@posterous.com",
+        "phone": "+1 609 937 3468",
+        "username": "lgribbinc",
+        "password": "ftGj8LZTtv9g",
+        "birthDate": "1967-07-23",
+        "image": "https://robohash.org/voluptatemsintnulla.png",
+        "bloodGroup": "O+",
+        "height": 181,
+        "weight": 56.5,
+        "eyeColor": "Amber",
+        "hair": {
+          "color": "Auburn",
+          "type": "Straight"
+        },
+        "domain": "histats.com",
+        "ip": "163.245.232.27",
+        "address": {
+          "address": "87 Horseshoe Drive",
+          "city": "West Windsor",
+          "coordinates": {
+            "lat": 43.4731793,
+            "lng": -72.4967532
+          },
+          "postalCode": "05037",
+          "state": "VT"
+        }};
+            const person14 = {"id": 14,
+        "firstName": "Enoch",
+        "lastName": "Lynch",
+        "maidenName": "Heidenreich",
+        "age": 21,
+        "gender": "male",
+        "email": "mturleyd@tumblr.com",
+        "phone": "+94 912 100 5118",
+        "username": "mturleyd",
+        "password": "GyLnCB8gNIp",
+        "birthDate": "1979-08-25",
+        "image": "https://robohash.org/quisequienim.png",
+        "bloodGroup": "O+",
+        "height": 150,
+        "weight": 100.3,
+        "eyeColor": "Green",
+        "hair": {
+          "color": "Auburn",
+          "type": "Strands"
+        },
+        "domain": "icio.us",
+        "ip": "174.238.43.126",
+        "address": {
+          "address": "60 Desousa Drive",
+          "city": "Manchester",
+          "coordinates": {
+            "lat": 41.7409259,
+            "lng": -72.5619104
+          },
+          "postalCode": "06040",
+          "state": "CT"
+        }};
+            const person15 = {"id": 15,
+        "firstName": "Jeanne",
+        "lastName": "Halvorson",
+        "maidenName": "Cummerata",
+        "age": 26,
+        "gender": "female",
+        "email": "kminchelle@qq.com",
+        "phone": "+86 581 108 7855",
+        "username": "kminchelle",
+        "password": "0lelplR",
+        "birthDate": "1996-02-02",
+        "image": "https://robohash.org/autquiaut.png",
+        "bloodGroup": "A+",
+        "height": 176,
+        "weight": 45.7,
+        "eyeColor": "Amber",
+        "hair": {
+          "color": "Blond",
+          "type": "Straight"
+        },
+        "domain": "google.co.uk",
+        "ip": "78.43.74.226",
+        "address": {
+          "address": "4 Old Colony Way",
+          "city": "Yarmouth",
+          "coordinates": {
+            "lat": 41.697168,
+            "lng": -70.189992
+          },
+          "postalCode": "02664",
+          "state": "MA"
+        }};
+            const person16 = { "id": 16,
+        "firstName": "Trycia",
+        "lastName": "Fadel",
+        "maidenName": "Rosenbaum",
+        "age": 41,
+        "gender": "female",
+        "email": "dpierrof@vimeo.com",
+        "phone": "+420 833 708 0340",
+        "username": "dpierrof",
+        "password": "Vru55Y4tufI4",
+        "birthDate": "1963-07-03",
+        "image": "https://robohash.org/porronumquamid.png",
+        "bloodGroup": "B+",
+        "height": 166,
+        "weight": 87.2,
+        "eyeColor": "Gray",
+        "hair": {
+          "color": "Black",
+          "type": "Very curly"
+        },
+        "domain": "tamu.edu",
+        "ip": "82.170.69.15",
+        "address": {
+          "address": "314 South 17th Street",
+          "city": "Nashville",
+          "coordinates": {
+            "lat": 36.1719075,
+            "lng": -86.740228
+          },
+          "postalCode": "37206",
+          "state": "TN"
+        }};
+            const person17 = {"id": 17,
+        "firstName": "Bradford",
+        "lastName": "Prohaska",
+        "maidenName": "Bins",
+        "age": 43,
+        "gender": "male",
+        "email": "vcholdcroftg@ucoz.com",
+        "phone": "+420 874 628 3710",
+        "username": "vcholdcroftg",
+        "password": "mSPzYZfR",
+        "birthDate": "1975-10-20",
+        "image": "https://robohash.org/accusantiumvoluptateseos.png",
+        "bloodGroup": "O−",
+        "height": 199,
+        "weight": 94.3,
+        "eyeColor": "Brown",
+        "hair": {
+          "color": "Black",
+          "type": "Curly"
+        },
+        "domain": "wix.com",
+        "ip": "75.75.234.243",
+        "address": {
+          "address": "1649 Timberridge Court",
+          "city": "Fayetteville",
+          "coordinates": {
+            "lat": 36.084563,
+            "lng": -94.206082
+          },
+          "postalCode": "72704",
+          "state": "AR"
+        }};
+            const person18 = {
+              "id": 18,
+        "firstName": "Arely",
+        "lastName": "Skiles",
+        "maidenName": "Monahan",
+        "age": 42,
+        "gender": "male",
+        "email": "sberminghamh@chron.com",
+        "phone": "+55 886 766 8617",
+        "username": "sberminghamh",
+        "password": "cAjfb8vg",
+        "birthDate": "1958-02-05",
+        "image": "https://robohash.org/nihilharumqui.png",
+        "bloodGroup": "AB−",
+        "height": 192,
+        "weight": 97,
+        "eyeColor": "Amber",
+        "hair": {
+          "color": "Brown",
+          "type": "Straight"
+        },
+        "domain": "seesaa.net",
+        "ip": "29.82.54.30",
+        "address": {
+          "address": "5461 West Shades Valley Drive",
+          "city": "Montgomery",
+          "coordinates": {
+            "lat": 32.296422,
+            "lng": -86.34280299999999
+          },
+          "postalCode": "36108",
+          "state": "AL"
+        }
+            };
+            const person19 = {"id": 19,
+        "firstName": "Gust",
+        "lastName": "Purdy",
+        "maidenName": "Abshire",
+        "age": 46,
+        "gender": "male",
+        "email": "bleveragei@so-net.ne.jp",
+        "phone": "+86 886 889 0258",
+        "username": "bleveragei",
+        "password": "UZGAiqPqWQHQ",
+        "birthDate": "1989-10-15",
+        "image": "https://robohash.org/delenitipraesentiumvoluptatum.png",
+        "bloodGroup": "A−",
+        "height": 167,
+        "weight": 65.3,
+        "eyeColor": "Amber",
+        "hair": {
+          "color": "Black",
+          "type": "Straight"
+        },
+        "domain": "homestead.com",
+        "ip": "90.202.216.39",
+        "address": {
+          "address": "629 Debbie Drive",
+          "city": "Nashville",
+          "coordinates": {
+            "lat": 36.208114,
+            "lng": -86.58621199999999
+          },
+          "postalCode": "37076",
+          "state": "TN"
+        }};
+            const person20 = {"id": 20,
+        "firstName": "Lenna",
+        "lastName": "Renner",
+        "maidenName": "Schumm",
+        "age": 41,
+        "gender": "female",
+        "email": "aeatockj@psu.edu",
+        "phone": "+1 904 601 7177",
+        "username": "aeatockj",
+        "password": "szWAG6hc",
+        "birthDate": "1980-01-19",
+        "image": "https://robohash.org/ipsumutofficiis.png",
+        "bloodGroup": "O−",
+        "height": 175,
+        "weight": 68,
+        "eyeColor": "Green",
+        "hair": {
+          "color": "Black",
+          "type": "Strands"
+        },
+        "domain": "sourceforge.net",
+        "ip": "59.43.194.22",
+        "address": {
+          "address": "22572 Toreador Drive",
+          "city": "Salinas",
+          "coordinates": {
+            "lat": 36.602449,
+            "lng": -121.699071
+          },
+          "postalCode": "93908",
+          "state": "CA"
+        }};
+            const person21 = {"id": 21,
+        "firstName": "Doyle",
+        "lastName": "Ernser",
+        "maidenName": "Feeney",
+        "age": 23,
+        "gender": "male",
+        "email": "ckensleyk@pen.io",
+        "phone": "+86 634 419 6839",
+        "username": "ckensleyk",
+        "password": "tq7kPXyf",
+        "birthDate": "1983-01-22",
+        "image": "https://robohash.org/providenttemporadelectus.png",
+        "bloodGroup": "A−",
+        "height": 173,
+        "weight": 69.9,
+        "eyeColor": "Brown",
+        "hair": {
+          "color": "Black",
+          "type": "Curly"
+        },
+        "domain": "free.fr",
+        "ip": "87.213.156.73",
+        "address": {
+          "address": "3034 Mica Street",
+          "city": "Fayetteville",
+          "coordinates": {
+            "lat": 36.0807929,
+            "lng": -94.2066449
+          },
+          "postalCode": "72704",
+          "state": "AR"
+        }};
+            const person22 = { "id": 22,
+        "firstName": "Tressa",
+        "lastName": "Weber",
+        "maidenName": "Williamson",
+        "age": 41,
+        "gender": "female",
+        "email": "froachel@howstuffworks.com",
+        "phone": "+34 517 104 6248",
+        "username": "froachel",
+        "password": "rfVSKImC",
+        "birthDate": "1987-11-11",
+        "image": "https://robohash.org/temporarecusandaeest.png",
+        "bloodGroup": "B−",
+        "height": 164,
+        "weight": 87.1,
+        "eyeColor": "Green",
+        "hair": {
+          "color": "Black",
+          "type": "Strands"
+        },
+        "domain": "indiatimes.com",
+        "ip": "71.57.235.192",
+        "address": {
+          "address": "3729 East Mission Boulevard",
+          "city": "Fayetteville",
+          "coordinates": {
+            "lat": 36.0919353,
+            "lng": -94.10654219999999
+          },
+          "postalCode": "72703",
+          "state": "AR"
+        }};
+            const person23 = {"id": 23,
+        "firstName": "Felicity",
+        "lastName": "O'Reilly",
+        "maidenName": "Rosenbaum",
+        "age": 46,
+        "gender": "female",
+        "email": "beykelhofm@wikispaces.com",
+        "phone": "+63 919 564 1690",
+        "username": "beykelhofm",
+        "password": "zQwaHTHbuZyr",
+        "birthDate": "1967-10-05",
+        "image": "https://robohash.org/odioquivero.png",
+        "bloodGroup": "O−",
+        "height": 151,
+        "weight": 96.7,
+        "eyeColor": "Brown",
+        "hair": {
+          "color": "Brown",
+          "type": "Curly"
+        },
+        "domain": "tamu.edu",
+        "ip": "141.14.53.176",
+        "address": {
+          "address": "5114 Greentree Drive",
+          "city": "Nashville",
+          "coordinates": {
+            "lat": 36.0618539,
+            "lng": -86.738508
+          },
+          "postalCode": "37211",
+          "state": "TN"
+        }};
+            const person24 = {"id": 24,
+        "firstName": "Jocelyn",
+        "lastName": "Schuster",
+        "maidenName": "Dooley",
+        "age": 19,
+        "gender": "male",
+        "email": "brickeardn@fema.gov",
+        "phone": "+7 968 462 1292",
+        "username": "brickeardn",
+        "password": "bMQnPttV",
+        "birthDate": "1966-06-02",
+        "image": "https://robohash.org/odiomolestiaealias.png",
+        "bloodGroup": "O+",
+        "height": 166,
+        "weight": 93.3,
+        "eyeColor": "Brown",
+        "hair": {
+          "color": "Brown",
+          "type": "Curly"
+        },
+        "domain": "pen.io",
+        "ip": "116.92.198.102",
+        "address": {
+          "address": "3466 Southview Avenue",
+          "city": "Montgomery",
+          "coordinates": {
+            "lat": 32.341227,
+            "lng": -86.2846859
+          },
+          "postalCode": "36111",
+          "state": "AL"
+        }};
+            const person25 = {"id": 25,
+        "firstName": "Edwina",
+        "lastName": "Ernser",
+        "maidenName": "Kiehn",
+        "age": 21,
+        "gender": "female",
+        "email": "dfundello@amazon.co.jp",
+        "phone": "+86 376 986 8945",
+        "username": "dfundello",
+        "password": "k9zgV68UKw8m",
+        "birthDate": "2000-09-28",
+        "image": "https://robohash.org/doloremautdolores.png",
+        "bloodGroup": "O+",
+        "height": 180,
+        "weight": 102.1,
+        "eyeColor": "Blue",
+        "hair": {
+          "color": "Brown",
+          "type": "Wavy"
+        },
+        "domain": "apple.com",
+        "ip": "48.30.193.203",
+        "address": {
+          "address": "1513 Cathy Street",
+          "city": "Savannah",
+          "coordinates": {
+            "lat": 32.067416,
+            "lng": -81.125331
+          },
+          "postalCode": "31415",
+          "state": "GA"
+        }};
+            const person26 = {"id": 26,
+        "firstName": "Griffin",
+        "lastName": "Braun",
+        "maidenName": "Deckow",
+        "age": 35,
+        "gender": "male",
+        "email": "lgronaverp@cornell.edu",
+        "phone": "+62 511 790 0161",
+        "username": "lgronaverp",
+        "password": "4a1dAKDv9KB9",
+        "birthDate": "1965-09-06",
+        "image": "https://robohash.org/laboriosammollitiaut.png",
+        "bloodGroup": "O−",
+        "height": 146,
+        "weight": 65.5,
+        "eyeColor": "Blue",
+        "hair": {
+          "color": "Blond",
+          "type": "Wavy"
+        },
+        "domain": "foxnews.com",
+        "ip": "93.246.47.59",
+        "address": {
+          "address": "600 West 19th Avenue",
+          "city": "Anchorage",
+          "coordinates": {
+            "lat": 61.203115,
+            "lng": -149.894107
+          },
+          "postalCode": "99503",
+          "state": "AK"
+        }};
+            const person27 = {"id": 27,
+        "firstName": "Piper",
+        "lastName": "Schowalter",
+        "maidenName": "Wuckert",
+        "age": 47,
+        "gender": "female",
+        "email": "fokillq@amazon.co.jp",
+        "phone": "+60 785 960 7918",
+        "username": "fokillq",
+        "password": "xZnWSWnqH",
+        "birthDate": "1983-06-07",
+        "image": "https://robohash.org/nequeodiosapiente.png",
+        "bloodGroup": "A−",
+        "height": 197,
+        "weight": 71.5,
+        "eyeColor": "Brown",
+        "hair": {
+          "color": "Black",
+          "type": "Curly"
+        },
+        "domain": "toplist.cz",
+        "ip": "100.159.51.104",
+        "address": {
+          "address": "1208 Elkader Court North",
+          "city": "Nashville",
+          "coordinates": {
+            "lat": 36.080049,
+            "lng": -86.60116099999999
+          },
+          "postalCode": "37013",
+          "state": "TN"
+        }};
+            const person28 = {"id": 28,
+        "firstName": "Kody",
+        "lastName": "Terry",
+        "maidenName": "Larkin",
+        "age": 28,
+        "gender": "male",
+        "email": "xisherwoodr@ask.com",
+        "phone": "+81 859 545 8951",
+        "username": "xisherwoodr",
+        "password": "HLDqN5vCF",
+        "birthDate": "1979-01-09",
+        "image": "https://robohash.org/consequunturabnon.png",
+        "bloodGroup": "B−",
+        "height": 172,
+        "weight": 90.2,
+        "eyeColor": "Blue",
+        "hair": {
+          "color": "Brown",
+          "type": "Wavy"
+        },
+        "domain": "elpais.com",
+        "ip": "51.102.180.216",
+        "address": {
+          "address": "210 Green Road",
+          "city": "Manchester",
+          "coordinates": {
+            "lat": 41.7909099,
+            "lng": -72.51195129999999
+          },
+          "postalCode": "06042",
+          "state": "CT"
+        }};
+            const person29 = {"id": 29,
+        "firstName": "Macy",
+        "lastName": "Greenfelder",
+        "maidenName": "Koepp",
+        "age": 45,
+        "gender": "female",
+        "email": "jissetts@hostgator.com",
+        "phone": "+81 915 649 2384",
+        "username": "jissetts",
+        "password": "ePawWgrnZR8L",
+        "birthDate": "1976-09-07",
+        "image": "https://robohash.org/amettemporeea.png",
+        "bloodGroup": "A−",
+        "height": 166,
+        "weight": 93.7,
+        "eyeColor": "Amber",
+        "hair": {
+          "color": "Black",
+          "type": "Straight"
+        },
+        "domain": "ibm.com",
+        "ip": "197.37.13.163",
+        "address": {
+          "address": "49548 Road 200",
+          "city": "O'Neals",
+          "coordinates": {
+            "lat": 37.153463,
+            "lng": -119.648192
+          },
+          "postalCode": "93645",
+          "state": "CA"
+        }};
+            const person30 = {"id": 30,
+        "firstName": "Maurine",
+        "lastName": "Stracke",
+        "maidenName": "Abshire",
+        "age": 31,
+        "gender": "female",
+        "email": "kdulyt@umich.edu",
+        "phone": "+48 143 590 6847",
+        "username": "kdulyt",
+        "password": "5t6q4KC7O",
+        "birthDate": "1964-12-18",
+        "image": "https://robohash.org/perferendisideveniet.png",
+        "bloodGroup": "O−",
+        "height": 170,
+        "weight": 107.2,
+        "eyeColor": "Blue",
+        "hair": {
+          "color": "Blond",
+          "type": "Wavy"
+        },
+        "domain": "ow.ly",
+        "ip": "97.11.116.84",
+        "address": {
+          "address": "81 Seaton Place Northwest",
+          "city": "Washington",
+          "coordinates": {
+            "lat": 38.9149499,
+            "lng": -77.01170259999999
+          },
+          "postalCode": "20001",
+          "state": "DC"
+        }};
+          const form = document.querySelector('.form');
+          const result = document.querySelector('.result');
+        
+          form.addEventListener('submit', event => {
+            event.preventDefault();
+            const id = document.getElementById('num1').value;
+            if (person.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person.firstName} ${person.lastName}</p>
+                <p>Email: ${person.email}</p>
+                <p>Phone: ${person.phone}</p>
+                <p>Address: ${person.address.address}, ${person.address.city}, ${person.address.state} ${person.address.postalCode}</p>
+              `;
+            } else if (person2.id == id ){
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person2.firstName} ${person2.lastName}</p>
+                <p>Email: ${person2.email}</p>
+                <p>Phone: ${person2.phone}</p>
+                <p>Address: ${person2.address.address}, ${person2.address.city}, ${person2.address.state} ${person2.address.postalCode}</p>
+              `;
+            }else if (person3.id == id ){
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person3.firstName} ${person3.lastName}</p>
+                <p>Email: ${person3.email}</p>
+                <p>Phone: ${person3.phone}</p>
+                <p>Address: ${person3.address.address}, ${person3.address.city}, ${person3.address.state} ${person3.address.postalCode}</p>
+              `;
+            }else if (person4.id == id ){
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person4.firstName} ${person4.lastName}</p>
+                <p>Email: ${person4.email}</p>
+                <p>Phone: ${person4.phone}</p>
+                <p>Address: ${person4.address.address}, ${person4.address.city}, ${person4.address.state} ${person4.address.postalCode}</p>
+              `;
+            }else if (person5.id == id ){
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person5.firstName} ${person5.lastName}</p>
+                <p>Email: ${person5.email}</p>
+                <p>Phone: ${person5.phone}</p>
+                <p>Address: ${person5.address.address}, ${person5.address.city}, ${person5.address.state} ${person5.address.postalCode}</p>
+              `;
+            }else if (person6.id == id)
+            {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person6.firstName} ${person6.lastName}</p>
+                <p>Email: ${person6.email}</p>
+                <p>Phone: ${person6.phone}</p>
+                <p>Address: ${person6.address.address}, ${person6.address.city}, ${person6.address.state} ${person6.address.postalCode}</p>
+              `;
+            } else if (person7.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person7.firstName} ${person7.lastName}</p>
+                <p>Email: ${person7.email}</p>
+                <p>Phone: ${person7.phone}</p>
+                <p>Address: ${person7.address.address}, ${person7.address.city}, ${person7.address.state} ${person7.address.postalCode}</p>
+              `;
+            }else if (person8.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person8.firstName} ${person8.lastName}</p>
+                <p>Email: ${person8.email}</p>
+                <p>Phone: ${person8.phone}</p>
+                <p>Address: ${person8.address.address}, ${person8.address.city}, ${person8.address.state} ${person8.address.postalCode}</p>
+              `;
+            }else if (person9.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person9.firstName} ${person9.lastName}</p>
+                <p>Email: ${person9.email}</p>
+                <p>Phone: ${person9.phone}</p>
+                <p>Address: ${person9.address.address}, ${person9.address.city}, ${person9.address.state} ${person9.address.postalCode}</p>
+              `;
+            }else if (person10.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person10.firstName} ${person10.lastName}</p>
+                <p>Email: ${person10.email}</p>
+                <p>Phone: ${person10.phone}</p>
+                <p>Address: ${person10.address.address}, ${person10.address.city}, ${person10.address.state} ${person10.address.postalCode}</p>
+              `;
+            }else if (person11.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person11.firstName} ${person11.lastName}</p>
+                <p>Email: ${person11.email}</p>
+                <p>Phone: ${person11.phone}</p>
+                <p>Address: ${person11.address.address}, ${person11.address.city}, ${person11.address.state} ${person11.address.postalCode}</p>
+              `;
+            }else if (person12.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person12.firstName} ${person12.lastName}</p>
+                <p>Email: ${person12.email}</p>
+                <p>Phone: ${person12.phone}</p>
+                <p>Address: ${person12.address.address}, ${person12.address.city}, ${person12.address.state} ${person12.address.postalCode}</p>
+              `;
+            }else if (person13.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person13.firstName} ${person13.lastName}</p>
+                <p>Email: ${person13.email}</p>
+                <p>Phone: ${person13.phone}</p>
+                <p>Address: ${person13.address.address}, ${person13.address.city}, ${person13.address.state} ${person13.address.postalCode}</p>
+              `;
+            }else if (person14.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person14.firstName} ${person14.lastName}</p>
+                <p>Email: ${person14.email}</p>
+                <p>Phone: ${person14.phone}</p>
+                <p>Address: ${person14.address.address}, ${person14.address.city}, ${person14.address.state} ${person14.address.postalCode}</p>
+              `;
+            }else if (person15.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person15.firstName} ${person15.lastName}</p>
+                <p>Email: ${person15.email}</p>
+                <p>Phone: ${person15.phone}</p>
+                <p>Address: ${person15.address.address}, ${person15.address.city}, ${person15.address.state} ${person15.address.postalCode}</p>
+              `;
+            }else if (person16.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person16.firstName} ${person16.lastName}</p>
+                <p>Email: ${person16.email}</p>
+                <p>Phone: ${person16.phone}</p>
+                <p>Address: ${person16.address.address}, ${person16.address.city}, ${person16.address.state} ${person16.address.postalCode}</p>
+              `;
+            }else if (person17.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person17.firstName} ${person17.lastName}</p>
+                <p>Email: ${person17.email}</p>
+                <p>Phone: ${person17.phone}</p>
+                <p>Address: ${person17.address.address}, ${person17.address.city}, ${person17.address.state} ${person17.address.postalCode}</p>
+              `;
+            }else if (person18.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person18.firstName} ${person18.lastName}</p>
+                <p>Email: ${person18.email}</p>
+                <p>Phone: ${person18.phone}</p>
+                <p>Address: ${person18.address.address}, ${person18.address.city}, ${person18.address.state} ${person18.address.postalCode}</p>
+              `;
+            }else if (person19.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person19.firstName} ${person19.lastName}</p>
+                <p>Email: ${person19.email}</p>
+                <p>Phone: ${person19.phone}</p>
+                <p>Address: ${person19.address.address}, ${person19.address.city}, ${person19.address.state} ${person19.address.postalCode}</p>
+              `;
+            }else if (person20.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person20.firstName} ${person20.lastName}</p>
+                <p>Email: ${person20.email}</p>
+                <p>Phone: ${person20.phone}</p>
+                <p>Address: ${person20.address.address}, ${person20.address.city}, ${person20.address.state} ${person20.address.postalCode}</p>
+              `;
+            }else if (person21.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person21.firstName} ${person21.lastName}</p>
+                <p>Email: ${person21.email}</p>
+                <p>Phone: ${person21.phone}</p>
+                <p>Address: ${person21.address.address}, ${person21.address.city}, ${person21.address.state} ${person21.address.postalCode}</p>
+              `;
+            }else if (person22.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person22.firstName} ${person22.lastName}</p>
+                <p>Email: ${person22.email}</p>
+                <p>Phone: ${person22.phone}</p>
+                <p>Address: ${person22.address.address}, ${person22.address.city}, ${person22.address.state} ${person22.address.postalCode}</p>
+              `;
+            }else if (person23.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person23.firstName} ${person23.lastName}</p>
+                <p>Email: ${person23.email}</p>
+                <p>Phone: ${person23.phone}</p>
+                <p>Address: ${person23.address.address}, ${person23.address.city}, ${person23.address.state} ${person23.address.postalCode}</p>
+              `;
+            }else if (person24.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person24.firstName} ${person24.lastName}</p>
+                <p>Email: ${person24.email}</p>
+                <p>Phone: ${person24.phone}</p>
+                <p>Address: ${person24.address.address}, ${person24.address.city}, ${person24.address.state} ${person24.address.postalCode}</p>
+              `;
+            }else if (person25.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person25.firstName} ${person25.lastName}</p>
+                <p>Email: ${person25.email}</p>
+                <p>Phone: ${person25.phone}</p>
+                <p>Address: ${person25.address.address}, ${person25.address.city}, ${person25.address.state} ${person25.address.postalCode}</p>
+              `;
+            }else if (person26.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person26.firstName} ${person26.lastName}</p>
+                <p>Email: ${person26.email}</p>
+                <p>Phone: ${person26.phone}</p>
+                <p>Address: ${person26.address.address}, ${person26.address.city}, ${person26.address.state} ${person26.address.postalCode}</p>
+              `;
+            }else if (person27.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person27.firstName} ${person27.lastName}</p>
+                <p>Email: ${person27.email}</p>
+                <p>Phone: ${person27.phone}</p>
+                <p>Address: ${person27.address.address}, ${person27.address.city}, ${person27.address.state} ${person27.address.postalCode}</p>
+              `;
+            }else if (person28.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person28.firstName} ${person28.lastName}</p>
+                <p>Email: ${person28.email}</p>
+                <p>Phone: ${person28.phone}</p>
+                <p>Address: ${person28.address.address}, ${person28.address.city}, ${person28.address.state} ${person28.address.postalCode}</p>
+              `;
+            }else if (person29.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person29.firstName} ${person29.lastName}</p>
+                <p>Email: ${person29.email}</p>
+                <p>Phone: ${person29.phone}</p>
+                <p>Address: ${person29.address.address}, ${person29.address.city}, ${person29.address.state} ${person29.address.postalCode}</p>
+              `;
+            }else if (person30.id == id) {
+              result.innerHTML = `
+                <h2>User Information</h2>
+                <p>Name: ${person30.firstName} ${person30.lastName}</p>
+                <p>Email: ${person30.email}</p>
+                <p>Phone: ${person30.phone}</p>
+                <p>Address: ${person30.address.address}, ${person30.address.city}, ${person30.address.state} ${person30.address.postalCode}</p>
+              `;
+            }
+            else
+            {
+              result.innerHTML = 'User not found!';
+            }
+          });
+        </script>
+        
+    </body>
+</html>
