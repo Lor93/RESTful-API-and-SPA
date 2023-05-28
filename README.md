@@ -6,6 +6,8 @@ command prompt of --node main.js-- which will then launch in the broswer on
 --localhost:3000--. WHen it run on the browser it will only display the full
 users.json list. If you wnat to manipluate it more, use POOSTman to do more with 
 the GET, POST, PUT, DELETE function. 
+
+
 The second file will contain a SPA (Single Page Assignment), with a
 form base setup. The main file for this SPA is with the index.js.
 To use it you will have to run -- http-server -- in terminal 
